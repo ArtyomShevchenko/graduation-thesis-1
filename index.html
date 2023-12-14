@@ -6,10 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лабораторная работа №1</title>
     <style>
+        :root {
+            --text-color-main: black;
+            --text-color-second: gray;
+
+            --bg-main: white;
+            --bg-second: red;
+            --bg-third: rgb(116, 195, 255);
+
+            ---wrapper-width: 756px;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        *[class*="content"].content {
+            padding: 2.5rem 0;
         }
 
         body {
@@ -17,31 +32,30 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            background: linear-gradient(90deg, var(--bg-second) 50%, var(--bg-third) 50%)
         }
 
         .wrapper {
-            max-width: 756px;
+            max-width: calc(var(---wrapper-width) + 2rem);
             margin-inline: auto;
-        }
-
-        header .container {
-            padding: 40px 0;
+            padding-inline: 1rem;
+            background-color: var(--bg-main);
         }
 
         h1 {
             text-align: end;
-            color: gray;
+            color: var(--text-color-second);
         }
 
         form {
             display: flex;
-            gap: 30px;
+            gap: 2rem;
         }
 
         form>div {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 1rem;
         }
 
         form label {
@@ -51,11 +65,11 @@
         input[type="text"],
         button[type="submit"],
         label {
-            padding: 2px 4px;
+            padding: .1rem .2rem;
         }
 
         .content-body {
-            max-width: 520px;
+            max-width: 32.5rem;
             margin-inline: auto;
             margin-top: 3rem;
         }
@@ -77,15 +91,11 @@
             margin-top: auto;
         }
 
-        footer .container {
-            padding: 40px 0;
-        }
-
         footer p {
             max-width: fit-content;
             text-decoration: underline;
             color: gray;
-            margin: 4px auto;
+            margin: .3rem auto;
         }
     </style>
 </head>
